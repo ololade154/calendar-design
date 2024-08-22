@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calendar Design</title>
+    <link rel="stylesheet" href="/css/index.css" />
+  </head>
+  <body>
+    <div class="hero">
+      <div class="calendar">
+        <div class="left">
+          <p id="date"></p>
+          <p id="day"></p>
+        </div>
+        <div class="right">
+          <p id="month"></p>
+          <p id="year"></p>
+        </div>
+      </div>
+      <h3 id="copyright"></h3>
+    </div>
+    <script>
+      const date = document.getElementById("date");
+      const day = document.getElementById("day");
+      const month = document.getElementById("month");
+      const year = document.getElementById("year");
+      const copyRight = document.getElementById("copyright");
+      const todayDate = new Date();
+      const daysOfTheWeek = [
+        "sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ];
+      const monthInAyear = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+      ];
+      date.innerHTML = todayDate.getDate();
+      day.innerHTML = daysOfTheWeek[todayDate.getDay()];
+      month.innerHTML = monthInAyear[todayDate.getMonth()];
+      year.innerHTML = todayDate.getFullYear();
+    </script>
+  </body>
+</html>
